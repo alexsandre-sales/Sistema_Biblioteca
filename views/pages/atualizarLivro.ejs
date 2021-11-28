@@ -1,0 +1,35 @@
+<h1 class='text-center mt-5'>Atualizar Livro</h1>
+<form action="/atualizarLivro" method="post">
+    <div class='container'>
+        <div class='row mb-4'>
+            <div class='col-lg-6'>
+                <label for='titulo' class='form-label'>Titulo</label>
+                <input class='form-control' type='text' id='titulo' name='titulo' value="<%= livro_item.titulo %>" placeholder='digite o nome do livro'
+                    required>
+                <label for='autor' class='form-label'>Autor</label>
+                <input class='form-control' type='text' id='autor' name='autor' value="<%= livro_item.autor %>" placeholder='digite o autor do livro'
+                    required>
+                <label for='ano' class='form-label'>Ano</label>
+                <input class='form-control' type='number' id='ano' name='ano' value="<%= livro_item.ano %>" placeholder='digite o ano de publicação'
+                    required>
+                <label for='genero' class='form-label'>Gênero</label>
+                <input class='form-control' type='text' id='genero' name='genero' value="<%= livro_item.genero %>" placeholder='digite o genero de publicação' required>
+                <label for='genero' class='form-label'>Editora</label>
+                <input class='form-control' type='text' id='editora' value="<%= livro_item.editora %>" name='editora'  placeholder='digite o editora de publicação' required>
+                <label for='foto' class='form-label'>Foto do Livro</label>
+                <input class='form-control' type='file' id='foto' name='arquivoImage' required>
+
+                <input type="hidden" name="id" value="<%= livro_item._id %>">
+                <button class='btn btn-dark mt-3' type='submit'>Atualizar</button>
+                <button class='btn btn-dark mt-3' type='reset'>Limpar</button>
+
+            </div>
+            <div class='col-lg-6 m-auto d-flex justify-content-center'>
+                <div style='width: 202px; height: 309px; border: solid 1px black' id='aparecerImg'>
+                    <img src='/public/img/<%= livro_item.foto %>' id='mostraFoto'>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>

@@ -1,0 +1,10 @@
+#mostraFoto{
+    width: 200px;    
+    height: 306px;
+}
+
+#aparecerImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

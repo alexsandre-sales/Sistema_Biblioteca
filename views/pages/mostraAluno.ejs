@@ -1,0 +1,42 @@
+<h1 class='text-center mt-5'>Lista dos alunos</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="row mt-5">        
+        <input class="mx-2" type="text" id="myInput" onkeyup="pesquisarLivro()" placeholder="Pesquisar por título" />
+      </div>
+      <table id="table" class="table table-sm table-hover">
+        <thead>
+          <tr>
+            <th>Aluno</th>
+            <th>Senha</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%if(aluno_item=="" ){ %>
+            <tr>
+              <td colspan="4" class="alert alert-warning">
+                Nenhum aluno cadastrado !
+              </td>
+            </tr>
+            <%}else{ aluno_item.forEach(function(aluno) { %>
+              <tr>
+                <td>
+                  <%= aluno.user %>
+                </td>
+                <td>
+                  <%= aluno.senha %>
+                </td>
+                <td>
+                  <a href="/atualizarAluno/<%= aluno._id %>" class="btn btn-sm btn-success">Editar</a>
+                  <a href="/deletarAluno/<%=aluno._id %>" class="btn btn-sm btn-success">Deletar</a>                  
+                </td>
+              </tr>
+              <% })} %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

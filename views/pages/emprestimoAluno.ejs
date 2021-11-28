@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <ul class="list-group">
+        <% aluno_item.forEach(function(aluno) { %>
+            <li class="list-group-item py-3 my-2">
+                <div class="row g-3 my-2">
+                    <div class="col-4 col-md-3 col-lg-2">
+                        <img src="public/img/<%= aluno.livro.foto %>" class="img-thumbnail">
+                    </div>
+                    <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
+                        <h5 class="fw-bold">
+                            <%= aluno.livro.nome %>
+                        </h5>
+                        <p>
+                            <%= aluno.livro.autor %>
+                        </p>
+                        <p>
+                            <%= aluno.livro.ano %>
+                        </p>
+                        <p>
+                            <%= aluno.livro.genero %>
+                        </p>
+                        <p>
+                            <%= aluno.livro.editora %>
+                        </p>
+                    </div>
+                    <div
+                        class="col-6 offset-6 col-sm-6 offset-sm6 col-md-4 offset-md-8 col-lg-3 offset-lg-0 col-xl-2 align-self-center mt-3">
+                        <div class="input-group">
+                            <a href="/deletarEmprestimo/<%= aluno.livro._id %>"><img src="public/img/delete.png" style="width: 20px" /></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <% }) %>
+    </ul>
+    <ul>
+        <li class="list-group-item py-3">
+            <div class="text-end">
+                <a href="/" class="btn btn-dark btn-sm">Continuar Adicionando</a>
+                <a href="/concluirEmprestimo" class="btn btn-dark btn-sm">Concluir Emprestimo</a>
+            </div>
+        </li>
+    </ul>
+</div>

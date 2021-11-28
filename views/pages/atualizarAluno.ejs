@@ -1,0 +1,17 @@
+<h1>Atualizar Alunos</h1>
+
+<form action="/atualizarAluno" method="POST">
+  <div class="form-group">
+    <label for="nome">Aluno</label>
+    <input type="text" class="form-control" id="user" name="user" value="<%= aluno_item.user %>"
+      placeholder="User do aluno" required />
+
+    <label for="senha">Senha</label>
+    <input type="password" class="form-control" id="senha" name="senha" value="<%= aluno_item.senha %>"
+      placeholder="Idade" required />
+
+    <input type="hidden" name="id" value="<%= aluno_item._id %>" />
+
+    <button class="btn btn-primary" type="submit">Atualizar</button>
+  </div>
+</form>

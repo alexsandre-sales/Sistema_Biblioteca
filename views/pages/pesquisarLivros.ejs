@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="row mt-5">
+        <div class="col-6">
+          <h1>Lista de Livros</h1> 
+          <a href='/' class='btn btn-dark mt-3 mb-3'>Vitrine</a>
+        </div>
+      </div>
+            <table class="table table-sm table-hover">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Autor</th>
+                  <th>Genero</th>
+                  <th>Ano</th>
+                  <th>Editora</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% livro_item.forEach(function(livro) { %>
+                <tr>
+                  <td><%= livro.titulo %></td>
+                  <td><%= livro.autor %></td>
+                  <td><%= livro.genero %></td>
+                  <td><%= livro.ano %></td>
+                  <td><%= livro.editora %></td>
+                  <td><%= livro.foto %></td>
+                  <td>
+                    <a href="/atualizarLivro/<%= livro._id %>" class="btn btn-sm btn-primary">Editar</a>
+                    <a href="/deletarLivro/<%=livro._id %>" class="btn btn-sm btn-primary">Deletar</a>
+                  </td>
+                </tr>
+                <% }) %>
+              </tbody>
+            </table>
+          </div>
+          
+    </div>
+  </div>
+</div>
