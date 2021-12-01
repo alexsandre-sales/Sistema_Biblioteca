@@ -6,13 +6,11 @@ const port = 3000;
 const LocalStorage = require('node-localstorage').LocalStorage
 localStorage = new LocalStorage('./scratch')
 
-mongoose.connect(
-  'digite aqui seu banco de dados',
+mongoose.connect('digite o link do seu banco de dados',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true
-  }
-);
+  });
 const app = express();
 
 app.set('view engine', 'ejs');
