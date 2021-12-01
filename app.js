@@ -7,7 +7,7 @@ const LocalStorage = require('node-localstorage').LocalStorage
 localStorage = new LocalStorage('./scratch')
 
 mongoose.connect(
-  'mongodb+srv://anakarolina:kafa3105@cluster0.q0vfz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+  'digite aqui seu banco de dados',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true
